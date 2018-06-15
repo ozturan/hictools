@@ -7,7 +7,7 @@
 # Dogancan Ozturan               		  #
 # 2018									  #
 ###########################################
-# usage: python Juicebox2STM.py <juicertools jar file> <input .hic file> <bin size> <fithic>
+# usage: python Juicebox2STM.py <juicertools jar file> <input .hic file> <bin size>
 
 
 from subprocess import call
@@ -19,7 +19,6 @@ jarfile=sys.argv[1]
 filename=sys.argv[2]
 # select the bin size
 bin=int(sys.argv[3])
-fithic=sys.argv[4]
 
 chromosomes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, "X", "Y"]
 
@@ -31,9 +30,6 @@ def convert():
 	                call(["java", "-jar", "{0}".format(jarfile),
 	                        "dump", "observed", "NONE", "{0}".format(filename), "chr{0}".format(i), "chr{0}".format(j), "BP", "%d" %bin, "{0}_chr{1}_chr{2}.matrix".format(filename, i, j)])
 	                call(["mv", "{0}_chr{1}_chr{2}.matrix".format(filename, i, j), "chr{0}".format(i)])
-	                if fithic="fithic":
-	                	
-
 	                print "Done -> chr{0}_chr{1}.matrix".format(i, j)
 
 
