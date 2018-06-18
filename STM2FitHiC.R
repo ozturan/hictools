@@ -8,7 +8,7 @@
 # Dogancan Ozturan               		      #
 # 2018									                  #
 ###########################################
-# usage: Rscript hic2FitHiC.R <filename> <chr1> <chr2> 
+# usage: Rscript STM2FitHiC.R <filename> <chr1> <chr2> 
 library(readr)
 library(data.table)
 
